@@ -1,0 +1,88 @@
+.etapa-formulario {
+    display: none;
+    animation: aparecer 0.5s ease;
+}
+
+.etapa-formulario.ativo {
+    display: block;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.opcao-card {
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    background: #fff;
+}
+
+.opcao-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+}
+
+.opcao-card.selecionada {
+    border-color: #f97316;
+    background: #fff7ed;
+}
+
+.card-resultado {
+    background: #fff;
+    border-radius: .75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    transition: all .3s ease;
+}
+
+.card-resultado:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+}
+
+.botao-proximo,
+.botao-voltar,
+.botao-reiniciar {
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
+    font-weight: 700;
+    transition: all .3s ease;
+}
+
+.botao-proximo {
+    background: #f97316;
+    color: #fff;
+}
+
+.botao-proximo:hover {
+    background: #ea580c;
+}
+
+.botao-voltar {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.botao-voltar:hover {
+    background: #d1d5db;
+}
+
+.botao-reiniciar {
+    background: #111827;
+    color: #fff;
+}
+
+.botao-reiniciar:hover {
+    background: #000;
+}

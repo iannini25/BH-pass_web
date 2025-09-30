@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BH Pass - Recomendações</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/recomendacoes.css" />
+    <link rel="icon" href="img/logo_bhpass.png">
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+    <!-- Cabeçalho -->
+    <header class="bg-orange-500 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="img/logo_bhpass.png" alt="Logo BH Pass" class="h-8 mr-2">
+            </div>
+
+            <!-- Menu desktop -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-orange-200">Início</a>
+                <a href="recomendacoes.html" class="hover:text-orange-200">Recomendações</a>
+                <a href="descubra.html" class="hover:text-orange-200">Descubra</a>
+            </nav>
+
+            <!-- Ações -->
+            <div class="flex items-center space-x-4">
+                <button id="botao-idioma" class="flex items-center text-sm">
+                    <i data-feather="globe" class="mr-1"></i><span>PT-BR</span>
+                </button>
+                <button id="botao-menu" class="md:hidden">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="menu-mobile" class="hidden md:hidden bg-orange-600 px-4 py-2">
+            <a href="index.html" class="block py-2 hover:text-orange-200">Início</a>
+            <a href="recomendacoes.html" class="block py-2 hover:text-orange-200">Recomendações</a>
+            <a href="descubra.html" class="block py-2 hover:text-orange-200">Descubra</a>
+        </div>
+    </header>
+
+    <!-- Conteúdo -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">Recomendações da Semana</h1>
+
+        <!-- Abas de Região -->
+        <div class="flex flex-wrap justify-center mb-8 gap-2">
+            <button class="aba-regiao ativa px-4 py-2 rounded-full bg-orange-500 text-white" data-regiao="todas">
+                Todas as Regiões
+            </button>
+            <button class="aba-regiao px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300" data-regiao="centro">
+                Centro
+            </button>
+            <button class="aba-regiao px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300" data-regiao="pampulha">
+                Pampulha
+            </button>
+            <button class="aba-regiao px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300" data-regiao="savassi">
+                Savassi
+            </button>
+            <button class="aba-regiao px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300" data-regiao="belvedere">
+                Belvedere
+            </button>
+
+        </div>
+
+
+        
+        <!-- Grid de Locais -->
+        <div id="lista-locais" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        </div>
+    </main>
+
+    
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+                <!-- Coluna 1: Sobre -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">BH Pass</h3>
+                    <p class="text-gray-400">Seu guia completo para explorar Belo Horizonte, de dia ou à noite.</p>
+                </div>
+
+                <!-- Coluna 2: Links -->
+                <div>
+                    <h4 class="font-bold mb-4">Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Início</a></li>
+                        <li><a href="recomendacoes.html" class="text-gray-400 hover:text-white">Recomendações</a></li>
+                        <li><a href="descubra.html" class="text-gray-400 hover:text-white">Descubra</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contato -->
+                <div>
+                    <h4 class="font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="mr-2 w-4 h-4"></i>
+                            <span class="text-gray-400">contato@bhpass.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="mr-2 w-4 h-4"></i>
+                            <span class="text-gray-400">(31) 98765-4321</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Redes Sociais -->
+                <div>
+                    <h4 class="font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/bernardo-iannini" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/bernardo-iannini" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/bernardo-iannini" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 BH Pass. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data/locais.js"></script>
+    <script src="js/recomendacoes.js"></script>
+
+</body>
+
+</html>

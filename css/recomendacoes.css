@@ -1,0 +1,19 @@
+.cartao-local {
+    transition: all .3s ease;
+}
+
+.cartao-local:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+}
+
+.aba-regiao {
+    transition: all .2s ease;
+}
+
+.aba-regiao.ativa {
+    background-color: #f97316;
+    /* laranja */
+    color: #fff;
+}
+
