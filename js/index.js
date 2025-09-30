@@ -181,4 +181,77 @@ if (botaoIdioma) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', applyI18nIndex);
+/* ====== Busca → monta URL e redireciona ====== */
+function setupHeroSearch() {
+  const selects = document.querySelectorAll('section select');
+  const btn = document.querySelector('section button');
+  if (!btn || selects.length < 4) return;
+
+  btn.addEventListener('click', () => {
+    // 0: Tipo | 1: Região | 2: Horário | 3: Preço
+    const sTipo = selects[0], sReg = selects[1], sHor = selects[2], sPre = selects[3];
+
+    // Mapeamentos por índice (independe do idioma)
+    // Tipo (categoria) – índice 0 é placeholder
+    const catMap = {
+      1: "RESTAURANTE",
+      2: "BAR",
+      3: "CAFE",
+      4: "MUSEU",
+      5: "PARQUE",
+      6: "BALADA"
+    };
+    const regMap = {
+      1: "centro",
+      2: "pampulha",
+      3: "savassi",
+      4: "belvedere"
+    };
+    const horMap = {
+      1: "MANHA",
+      2: "TARDE",
+      3: "NOITE"
+    };
+    const precoMap = {
+      1: 1, // $
+      2: 2, // $$
+      3: 3, // $$$
+      4: 4  // $$$$
+    };
+
+    const qs = new URLSearchParams();
+
+    // Região (se escolhido)
+    if (sReg.selectedIndex > 0) {
+      const r = regMap[sReg.selectedIndex];
+      if (r) qs.set("regiao", r);
+    }
+
+    // Horário (se escolhido)
+    if (sHor.selectedIndex > 0) {
+      const h = horMap[sHor.selectedIndex];
+      if (h) qs.set("horario", h); // single (recomendacoes.js aceita string ou lista "A,B")
+    }
+
+    // Preço (se escolhido)
+    if (sPre.selectedIndex > 0) {
+      const p = precoMap[sPre.selectedIndex];
+      if (p) qs.set("preco", String(p));
+    }
+
+    // Categoria (se escolhido)
+    if (sTipo.selectedIndex > 0) {
+      const c = catMap[sTipo.selectedIndex];
+      if (c) qs.set("cat", c);
+    }
+
+    // Vai para recomendações com os filtros
+    const url = qs.toString() ? `recomendacoes.html?${qs.toString()}` : `recomendacoes.html`;
+    window.location.href = url;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  applyI18nIndex();
+  setupHeroSearch();
+});
