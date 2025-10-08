@@ -190,9 +190,18 @@
             </div>
         </div>
     </footer>
+
+    <script>
+  feather.replace();
+  const btnMenu = document.getElementById('botao-menu');
+  const menuMobile = document.getElementById('menu-mobile');
+  btnMenu?.addEventListener('click', () => menuMobile.classList.toggle('hidden'));
+</script>
+
     <script src="data/locais.js"></script>
     <script src="js/index.js"></script>
 </body>
 
 
 </html>
+
