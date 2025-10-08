@@ -1,132 +1,261 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BH Pass — Quem Somos</title>
-  <meta name="description" content="Conheça a essência da BH Pass: missão, visão e valores que conectam você à Belo Horizonte de verdade." />
-  <link rel="preload" as="style" href="quem-somos.css" />
-  <link rel="stylesheet" href="quem-somos.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BH Pass - Quem Somos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="icon" href="img/logo_bhpass.png">
 </head>
-<body>
-  <!-- Navegação simples (ajuste os href conforme seu site) -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Página inicial da BH Pass">
-        <span class="brand-mark" aria-hidden="true">🗺️</span> BH Pass
-      </a>
-      <nav class="nav" aria-label="Principal">
-        <a href="/">Início</a>
-        <a aria-current="page" href="/quem-somos.html">Quem Somos</a>
-        <a href="/experiencias.html">Experiências</a>
-        <a href="/contato.html" class="btn btn--primary">Contato</a>
+
+<body class="bg-gray-50 font-sans">
+
+  <!-- Cabeçalho -->
+  <header class="bg-orange-500 text-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="img/logo_bhpass.png" alt="Logo BH Pass" class="h-8 mr-2">
+      </div>
+
+      <!-- Menu desktop -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-orange-200">Início</a>
+        <a href="recomendacoes.html" class="hover:text-orange-200">Recomendações</a>
+        <a href="descubra.html" class="hover:text-orange-200">Descubra</a>
+        <a href="quemsomos.html" aria-current="page" class="text-orange-100 font-semibold">Quem Somos?</a>
       </nav>
+
+      <!-- Ações -->
+      <div class="flex items-center space-x-4">
+        <button id="botao-idioma" class="flex items-center text-sm">
+          <i data-feather="globe" class="mr-1"></i><span>PT-BR</span>
+        </button>
+        <button id="botao-menu" class="md:hidden">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="menu-mobile" class="hidden md:hidden bg-orange-600 px-4 py-2">
+      <a href="index.html" class="block py-2 hover:text-orange-200">Início</a>
+      <a href="recomendacoes.html" class="block py-2 hover:text-orange-200">Recomendações</a>
+      <a href="descubra.html" class="block py-2 hover:text-orange-200">Descubra</a>
+      <a href="quemsomos.html" class="block py-2 text-orange-100 font-semibold">Quem Somos?</a>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <p class="eyebrow">Sobre nós</p>
-      <h1>Quem Somos</h1>
-      <p class="lead">
-        A BH Pass nasceu da vontade de mostrar Belo Horizonte como a gente vive e sente no dia a dia.
-        Nada de pacotes engessados — abrimos as portas da cidade para você aproveitar de verdade.
+  <section class="bg-gradient-to-b from-orange-400 to-orange-500 text-white py-12 md:py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">Quem Somos</h1>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto">
+        A BH Pass nasceu da vontade de mostrar Belo Horizonte como a gente vive e sente no dia a dia —
+        sem pacotes engessados, sem turismo de fachada. Abrimos as portas da cidade pra você aproveitar de verdade.
       </p>
     </div>
-    <div class="hero-bg" aria-hidden="true"></div>
   </section>
 
-  <main id="conteudo-principal" class="main">
-    <div class="container stack-xl">
-
-      <!-- Manifesto -->
-      <section class="card prose">
-        <h2 class="visually-hidden">Manifesto BH Pass</h2>
-        <p>
-          A gente acredita que viajar é muito mais do que visitar pontos turísticos.
-          É provar um pão de queijo quentinho na padaria da esquina, rir com os amigos num
-          boteco cheio de histórias e se perder (de propósito) pelas ruas cheias de cultura e afeto.
-        </p>
-        <p>
-          Nosso time é feito de gente apaixonada por Belo Horizonte, que conhece cada cantinho e
-          quer compartilhar isso com você. A BH Pass é seu passaporte para experiências autênticas,
-          acessíveis e, principalmente, inesquecíveis.
-        </p>
-      </section>
-
-      <!-- Missão, Visão -->
-      <section class="grid-2">
-        <article class="card accent">
-          <h3>Visão</h3>
-          <p>
-            Ser a principal porta de entrada para quem quer conhecer Belo Horizonte de verdade,
-            tornando a cidade referência em experiências culturais e humanas no Brasil e mundo.
-          </p>
-        </article>
-
-        <article class="card accent">
-          <h3>Nossa Missão</h3>
-          <p>
-            Conectar pessoas à essência de BH, oferecendo experiências turísticas autênticas,
-            acessíveis e acolhedoras, que mostrem o jeito mineiro de viver e receber bem.
-          </p>
-        </article>
-      </section>
-
-      <!-- Valores -->
-      <section class="values">
-        <h3>Nossos Valores</h3>
-        <ul class="values-grid" role="list">
-          <li class="value card">
-            <h4>Democratização Cultural</h4>
-            <p>
-              Abrir espaço para todos viverem a cultura e a diversidade de BH.
+  <!-- Seção Sobre / Manifesto -->
+  <section class="py-12">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div class="md:col-span-2">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Nossa essência</h2>
+            <p class="text-gray-700 mb-4">
+              A gente acredita que viajar é muito mais do que visitar pontos turísticos. É provar um pão de queijo
+              quentinho na padaria da esquina, rir com os amigos num boteco cheio de histórias e se perder (de propósito)
+              pelas ruas cheias de cultura e afeto.
             </p>
-          </li>
-          <li class="value card">
-            <h4>Acessibilidade</h4>
-            <p>
-              Criar experiências simples, que caibam no bolso — para todo mundo.
+            <p class="text-gray-700">
+              Nosso time é feito de gente apaixonada por Belo Horizonte, que conhece cada cantinho e quer compartilhar
+              isso com você. A BH Pass é seu passaporte para experiências autênticas, acessíveis e, principalmente, inesquecíveis.
             </p>
-          </li>
-          <li class="value card">
-            <h4>Sustentabilidade</h4>
-            <p>
-              Valorizar a cidade, sua gente e seu meio ambiente em cada escolha.
+          </div>
+          <div class="bg-orange-50 rounded-xl p-6 border border-orange-100">
+            <div class="flex items-center mb-3">
+              <i data-feather="map-pin" class="w-5 h-5 text-orange-500 mr-2"></i>
+              <h3 class="text-lg font-semibold text-gray-800">BH de verdade</h3>
+            </div>
+            <p class="text-gray-700">
+              Conteúdos e roteiros criados por quem vive a cidade — do café da manhã no Mercado às noites na Savassi.
             </p>
-          </li>
-          <li class="value card">
-            <h4>Inovação</h4>
-            <p>
-              Reinventar o turismo com criatividade e tecnologia, sem perder o calor humano.
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <!-- CTA -->
-      <section class="cta card cta--inset">
-        <div class="cta-inner">
-          <h3>Vamos viver BH de verdade?</h3>
-          <p>Descubra experiências autênticas feitas por quem mora e ama a cidade.</p>
+          </div>
         </div>
-        <a href="/experiencias.html" class="btn btn--primary" aria-label="Explorar experiências autênticas em BH">Explorar experiências</a>
-      </section>
-
+      </div>
     </div>
-  </main>
+  </section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> BH Pass. Feito com 💚 em Belo Horizonte.</p>
-      <a class="foot-link" href="/privacidade.html">Privacidade</a>
+  <!-- Visão e Missão -->
+  <section class="py-6">
+    <div class="container mx-auto px-4 max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-gray-100">
+        <div class="flex items-center mb-3">
+          <i data-feather="eye" class="w-5 h-5 text-orange-500 mr-2"></i>
+          <h3 class="text-xl font-bold text-gray-800">Visão</h3>
+        </div>
+        <p class="text-gray-700">
+          Ser a principal porta de entrada para quem quer conhecer Belo Horizonte de verdade,
+          tornando a cidade referência em experiências culturais e humanas no Brasil e mundo.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-gray-100">
+        <div class="flex items-center mb-3">
+          <i data-feather="target" class="w-5 h-5 text-orange-500 mr-2"></i>
+          <h3 class="text-xl font-bold text-gray-800">Nossa Missão</h3>
+        </div>
+        <p class="text-gray-700">
+          Conectar pessoas à essência de BH, oferecendo experiências turísticas autênticas, acessíveis e acolhedoras,
+          que mostrem o jeito mineiro de viver e receber bem.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section class="py-12">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8">Nossos Valores</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+          <div class="flex items-center mb-3">
+            <i data-feather="users" class="w-5 h-5 text-orange-500 mr-2"></i>
+            <h3 class="font-semibold text-gray-800">Democratização Cultural</h3>
+          </div>
+          <p class="text-gray-700">
+            Abrir espaço para todos viverem a cultura e a diversidade de BH.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+          <div class="flex items-center mb-3">
+            <i data-feather="accessibility" class="w-5 h-5 text-orange-500 mr-2"></i>
+            <h3 class="font-semibold text-gray-800">Acessibilidade</h3>
+          </div>
+          <p class="text-gray-700">
+            Criar experiências simples e que caibam no bolso — para todos.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+          <div class="flex items-center mb-3">
+            <i data-feather="leaf" class="w-5 h-5 text-orange-500 mr-2"></i>
+            <h3 class="font-semibold text-gray-800">Sustentabilidade</h3>
+          </div>
+          <p class="text-gray-700">
+            Valorizar a cidade, sua gente e seu meio ambiente.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+          <div class="flex items-center mb-3">
+            <i data-feather="cpu" class="w-5 h-5 text-orange-500 mr-2"></i>
+            <h3 class="font-semibold text-gray-800">Inovação</h3>
+          </div>
+          <p class="text-gray-700">
+            Reinventar o turismo com criatividade e tecnologia, sem perder o calor humano.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="bg-orange-500 rounded-2xl shadow-xl p-8 md:p-10 text-white flex flex-col md:flex-row md:items-center md:justify-between">
+        <div class="mb-4 md:mb-0">
+          <h3 class="text-2xl font-bold mb-1">Vamos viver BH de verdade?</h3>
+          <p class="text-orange-100">Descubra experiências autênticas feitas por quem ama a cidade.</p>
+        </div>
+        <a href="recomendacoes.html"
+           class="inline-block bg-white text-orange-600 font-bold py-3 px-6 rounded-lg hover:bg-orange-50 transition">
+          Explorar experiências
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+        <!-- Coluna 1: Sobre -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">BH Pass</h3>
+          <p class="text-gray-400">Seu guia completo para explorar Belo Horizonte, de dia ou à noite.</p>
+        </div>
+
+        <!-- Coluna 2: Links -->
+        <div>
+          <h4 class="font-bold mb-4">Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Início</a></li>
+            <li><a href="recomendacoes.html" class="text-gray-400 hover:text-white">Recomendações</a></li>
+            <li><a href="descubra.html" class="text-gray-400 hover:text-white">Descubra</a></li>
+            <li><a href="quemsomos.html" class="text-gray-200 hover:text-white">Quem Somos?</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Contato -->
+        <div>
+          <h4 class="font-bold mb-4">Contato</h4>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i data-feather="mail" class="mr-2 w-4 h-4"></i>
+              <span class="text-gray-400">contato@bhpass.com</span>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="phone" class="mr-2 w-4 h-4"></i>
+              <span class="text-gray-400">(31) 98765-4321</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Redes Sociais -->
+        <div>
+          <h4 class="font-bold mb-4">Redes Sociais</h4>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/in/bernardo-iannini" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+            <a href="https://www.linkedin.com/in/bernardo-iannini" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+            <a href="https://www.linkedin.com/in/bernardo-iannini" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2025 BH Pass. Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    // Atualiza o ano automaticamente
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Feather icons
+    feather.replace();
+
+    // Menu mobile
+    const btnMenu = document.getElementById('botao-menu');
+    const menuMobile = document.getElementById('menu-mobile');
+    btnMenu?.addEventListener('click', () => {
+      menuMobile.classList.toggle('hidden');
+    });
+
+    // Idioma (placeholder)
+    document.getElementById('botao-idioma')?.addEventListener('click', () => {
+      alert('Em breve: alternância de idioma.');
+    });
   </script>
 </body>
 </html>
