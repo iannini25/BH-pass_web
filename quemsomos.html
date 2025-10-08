@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BH Pass — Quem Somos</title>
+  <meta name="description" content="Conheça a essência da BH Pass: missão, visão e valores que conectam você à Belo Horizonte de verdade." />
+  <link rel="preload" as="style" href="quem-somos.css" />
+  <link rel="stylesheet" href="quem-somos.css" />
+</head>
+<body>
+  <!-- Navegação simples (ajuste os href conforme seu site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Página inicial da BH Pass">
+        <span class="brand-mark" aria-hidden="true">🗺️</span> BH Pass
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="/">Início</a>
+        <a aria-current="page" href="/quem-somos.html">Quem Somos</a>
+        <a href="/experiencias.html">Experiências</a>
+        <a href="/contato.html" class="btn btn--primary">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Sobre nós</p>
+      <h1>Quem Somos</h1>
+      <p class="lead">
+        A BH Pass nasceu da vontade de mostrar Belo Horizonte como a gente vive e sente no dia a dia.
+        Nada de pacotes engessados — abrimos as portas da cidade para você aproveitar de verdade.
+      </p>
+    </div>
+    <div class="hero-bg" aria-hidden="true"></div>
+  </section>
+
+  <main id="conteudo-principal" class="main">
+    <div class="container stack-xl">
+
+      <!-- Manifesto -->
+      <section class="card prose">
+        <h2 class="visually-hidden">Manifesto BH Pass</h2>
+        <p>
+          A gente acredita que viajar é muito mais do que visitar pontos turísticos.
+          É provar um pão de queijo quentinho na padaria da esquina, rir com os amigos num
+          boteco cheio de histórias e se perder (de propósito) pelas ruas cheias de cultura e afeto.
+        </p>
+        <p>
+          Nosso time é feito de gente apaixonada por Belo Horizonte, que conhece cada cantinho e
+          quer compartilhar isso com você. A BH Pass é seu passaporte para experiências autênticas,
+          acessíveis e, principalmente, inesquecíveis.
+        </p>
+      </section>
+
+      <!-- Missão, Visão -->
+      <section class="grid-2">
+        <article class="card accent">
+          <h3>Visão</h3>
+          <p>
+            Ser a principal porta de entrada para quem quer conhecer Belo Horizonte de verdade,
+            tornando a cidade referência em experiências culturais e humanas no Brasil e mundo.
+          </p>
+        </article>
+
+        <article class="card accent">
+          <h3>Nossa Missão</h3>
+          <p>
+            Conectar pessoas à essência de BH, oferecendo experiências turísticas autênticas,
+            acessíveis e acolhedoras, que mostrem o jeito mineiro de viver e receber bem.
+          </p>
+        </article>
+      </section>
+
+      <!-- Valores -->
+      <section class="values">
+        <h3>Nossos Valores</h3>
+        <ul class="values-grid" role="list">
+          <li class="value card">
+            <h4>Democratização Cultural</h4>
+            <p>
+              Abrir espaço para todos viverem a cultura e a diversidade de BH.
+            </p>
+          </li>
+          <li class="value card">
+            <h4>Acessibilidade</h4>
+            <p>
+              Criar experiências simples, que caibam no bolso — para todo mundo.
+            </p>
+          </li>
+          <li class="value card">
+            <h4>Sustentabilidade</h4>
+            <p>
+              Valorizar a cidade, sua gente e seu meio ambiente em cada escolha.
+            </p>
+          </li>
+          <li class="value card">
+            <h4>Inovação</h4>
+            <p>
+              Reinventar o turismo com criatividade e tecnologia, sem perder o calor humano.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta card cta--inset">
+        <div class="cta-inner">
+          <h3>Vamos viver BH de verdade?</h3>
+          <p>Descubra experiências autênticas feitas por quem mora e ama a cidade.</p>
+        </div>
+        <a href="/experiencias.html" class="btn btn--primary" aria-label="Explorar experiências autênticas em BH">Explorar experiências</a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> BH Pass. Feito com 💚 em Belo Horizonte.</p>
+      <a class="foot-link" href="/privacidade.html">Privacidade</a>
+    </div>
+  </footer>
+
+  <script>
+    // Atualiza o ano automaticamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
